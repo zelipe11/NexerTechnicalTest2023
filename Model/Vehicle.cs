@@ -19,24 +19,24 @@
 
         public double GetShippingCalculation(double fuelPrice, double weight, double distance)
         {
-            double fuel = 0d;
+            double fuelRequired = 0d;
 
-            if (this.WeightSupported >= weight)
-                fuel = distance / this.Autonomy;
+            if (this.WeightSupported >= weight)    
+                fuelRequired = distance / this.Autonomy;
 
             else
             {
-                var weightFRC = weight / this.WeightSupported;
-
-                int shipping = (int)Math.Ceiling(weightFRC);
-
-                fuel = shipping * (distance / this.Autonomy);
+                double weightFactor = weight / this.WeightSupported;
+                int shipments = (int)Math.Ceiling(weightFactor);
+                double distancePerShipment = distance / this.Autonomy;
+                fuelRequired = shipments * distancePerShipment;
             }
 
-            var shippingCalculation = fuel * fuelPrice;
+            double shippingCalculation = fuelRequired * fuelPrice;
 
             return shippingCalculation;
         }
+
 
         public virtual void showInfo()
         {
