@@ -17,6 +17,27 @@
 
         public abstract string Type();
 
+        public double GetShippingCalculation(double fuelPrice, double weight, double distance)
+        {
+            double fuel = 0d;
+
+            if (this.WeightSupported >= weight)
+                fuel = distance / this.Autonomy;
+
+            else
+            {
+                var weightFRC = weight / this.WeightSupported;
+
+                int shipping = (int)Math.Ceiling(weightFRC);
+
+                fuel = shipping * (distance / this.Autonomy);
+            }
+
+            var shippingCalculation = fuel * fuelPrice;
+
+            return shippingCalculation;
+        }
+
         public virtual void showInfo()
         {
             Console.WriteLine($"Marca: {Brand}, Modelo: {ModelName}, Rodas: {Wheels}");
