@@ -27,12 +27,13 @@
             listData.Columns.Add("Rodas");
             listData.Columns.Add("Autonomia");
             listData.Columns.Add("Peso Suportado (KG)");
+            listData.Columns.Add("Tipo de combustível");
 
             listData.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
 
             foreach (var item in Data.VEHICLES)
             {
-                listData.Items.Add(new ListViewItem(new string[] {item.Type(), item.Brand, item.ModelName, item.Wheels.ToString(), item.Autonomy.ToString(), item.WeightSupported.ToString() }));
+                listData.Items.Add(new ListViewItem(new string[] {item.Type(), item.Brand, item.ModelName, item.Wheels.ToString(), item.Autonomy.ToString(), item.WeightSupported.ToString(), item.FuelType.ToString() }));
             }
 
             listData.Columns[0].Width = -1;

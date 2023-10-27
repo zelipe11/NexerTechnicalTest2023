@@ -42,6 +42,8 @@
             this.txtKMs = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtWeight = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cmbFuelType = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -151,12 +153,32 @@
             this.txtWeight.Name = "txtWeight";
             this.txtWeight.Size = new System.Drawing.Size(63, 20);
             this.txtWeight.TabIndex = 4;
+            //
+            // label6
+            //
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(230, 25);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(70, 12);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Tipo de combustível";
+            //
+            // cmbFuelType
+            //
+            this.cmbFuelType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFuelType.FormattingEnabled = true;
+            this.cmbFuelType.Location = new System.Drawing.Point(340, 22);
+            this.cmbFuelType.Name = "cmbFuelType";
+            this.cmbFuelType.Size = new System.Drawing.Size(100, 22);
+            this.cmbFuelType.TabIndex = 16;
             // 
             // AddVehicle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(481, 202);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.cmbFuelType);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtWeight);
             this.Controls.Add(this.label4);
@@ -176,6 +198,7 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
+
         }
 
         #endregion
@@ -193,5 +216,7 @@
         private System.Windows.Forms.TextBox txtKMs;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtWeight;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cmbFuelType;
     }
 }

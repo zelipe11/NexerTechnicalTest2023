@@ -13,6 +13,7 @@
         public int Wheels { get; set; }
         public double WeightSupported { get; set; }
         public double Autonomy { get; set; }
+        public string FuelType { get; set; }
 
         public abstract string Type();
 

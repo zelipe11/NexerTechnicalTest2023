@@ -97,6 +97,7 @@
     <Compile Include="Model\Motorcycle.cs" />
     <Compile Include="Model\Truck.cs" />
     <Compile Include="Model\Vehicle.cs" />
+	<Compile Include="Model\Airplane.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
